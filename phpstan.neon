@@ -1,0 +1,24 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+
+    # Level 9 is the highest level
+    level: 9
+
+    ignoreErrors:
+#        - '#PHPDoc tag @var#'
+#        - '#^Variable \$key\ might not be defined.$#'
+#        - '#^Variable \$category_ids\ might not be defined.$#'
+#    excludePaths:
+#        - ./*/*/FileToBeExcluded.php
+#
+    excludePaths:
+        analyse:
+#            - app/Http/Resources/*
+    
+#    checkMissingIterableValueType: false
+#   checkGenericClassInNonGenericObjectType: false
