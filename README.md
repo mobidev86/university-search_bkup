@@ -16,8 +16,8 @@ Assuming you have docker installed in your system.
 
 1. Git clone "https://github.com/mobidev86/university-search.git"
 2. cd /university-search
-3. Run command: 
-    docker run --rm \
+3. Run command: <br/>
+    docker run --rm "\"
         -u "$(id -u):$(id -g)" \
         -v $(pwd):/var/www/html \
         -w /var/www/html \
