@@ -17,7 +17,7 @@ Assuming you have docker installed in your system.
 1. Git clone "https://github.com/mobidev86/university-search.git"
 2. cd /university-search
 3. Run command:
-    docker run --rm &#92; \
+    `docker run --rm &#92; \
         -u "$(id -u):$(id -g)" &#92; \
         -v $(pwd):/var/www/html &#92; \
         -w /var/www/html &#92; \
@@ -26,9 +26,9 @@ Assuming you have docker installed in your system.
         composer require laravel/passport \
         cp .env.example .env \
         php artisan key:generate \
-        ./vendor/bin/sail up
+        ./vendor/bin/sail up`
 
-4. ./vendor/bin/sail artisan passport:install && ./vendor/bin/sail artisan migrate && ./vendor/bin/sail artisan db:seed
+4. `./vendor/bin/sail artisan passport:install && ./vendor/bin/sail artisan migrate && ./vendor/bin/sail artisan db:seed`
 5. Open http://localhost OR http://127.0.0.1
 
 
