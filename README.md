@@ -22,10 +22,10 @@ Assuming you have docker installed in your system.
         -v $(pwd):/var/www/html &#92; \
         -w /var/www/html &#92; \
         laravelsail/php82-composer:latest &#92; \
-        composer install --ignore-platform-reqs
-        composer require laravel/passport
-        cp .env.example .env
-        php artisan key:generate
+        composer install --ignore-platform-reqs \
+        composer require laravel/passport \
+        cp .env.example .env \
+        php artisan key:generate \
         ./vendor/bin/sail up
 4. ./vendor/bin/sail artisan passport:install && ./vendor/bin/sail artisan migrate && ./vendor/bin/sail artisan db:seed
 5. Open http://localhost OR http://127.0.0.1
