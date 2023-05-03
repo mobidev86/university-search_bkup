@@ -12,14 +12,25 @@ This application will search universities by country, name, or domain.
 
 ## Steps to run application ##
 
+Assuming you have docker installed in your system.
+
 1. Git clone "https://github.com/mobidev86/university-search.git"
-2. composer install
-3. php artisan sail:install (choose option mysql and redis)
-4. npm install
-5. ./vendor/bin/sail up
-6. ./vendor/bin/sail artisan migrate
-7. ./vendor/bin/sail artisan db:seed
-8. npm run dev
+2. cd /university-search
+3. Run command: 
+    docker run --rm \
+        -u "$(id -u):$(id -g)" \
+        -v $(pwd):/var/www/html \
+        -w /var/www/html \
+        laravelsail/php82-composer:latest \
+        composer install --ignore-platform-reqs
+        composer require laravel/passport
+        cp .env.example .env
+        php artisan key:generate
+        ./vendor/bin/sail up
+4. ./vendor/bin/sail artisan passport:install && ./vendor/bin/sail artisan migrate && ./vendor/bin/sail artisan db:seed
+5. Open http://localhost OR http://127.0.0.1
+
+
 
 
 ## Cache ##
