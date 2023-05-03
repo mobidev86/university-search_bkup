@@ -16,12 +16,12 @@ Assuming you have docker installed in your system.
 
 1. Git clone "https://github.com/mobidev86/university-search.git"
 2. cd /university-search
-3. Run command: <br/>
+3. Run command:
     docker run --rm &#92;
-        -u "$(id -u):$(id -g)" \
-        -v $(pwd):/var/www/html \
-        -w /var/www/html \
-        laravelsail/php82-composer:latest \
+        -u "$(id -u):$(id -g)" &#92;
+        -v $(pwd):/var/www/html &#92;
+        -w /var/www/html &#92;
+        laravelsail/php82-composer:latest &#92;
         composer install --ignore-platform-reqs
         composer require laravel/passport
         cp .env.example .env
