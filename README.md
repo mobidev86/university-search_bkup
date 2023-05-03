@@ -17,8 +17,8 @@ Assuming you have docker installed in your system.
 1. Git clone "https://github.com/mobidev86/university-search.git"
 2. cd /university-search
 3. Run command:
-    `docker run --rm &#92; ` \
-        `-u "$(id -u):$(id -g)" &#92; ` \
+    `docker run --rm `&#92; \
+        `-u "$(id -u):$(id -g)" `&#92; \
         `-v $(pwd):/var/www/html &#92; ` \
         `-w /var/www/html &#92; ` \
         `laravelsail/php82-composer:latest &#92; ` \
