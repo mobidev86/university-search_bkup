@@ -19,9 +19,9 @@ Assuming you have docker installed in your system.
 3. Run command:
     `docker run --rm `&#92; \
         `-u "$(id -u):$(id -g)" `&#92; \
-        `-v $(pwd):/var/www/html &#92; ` \
-        `-w /var/www/html &#92; ` \
-        `laravelsail/php82-composer:latest &#92; ` \
+        `-v $(pwd):/var/www/html `&#92; \
+        `-w /var/www/html `&#92; \
+        `laravelsail/php82-composer:latest `&#92; \
         `composer install --ignore-platform-reqs ` \
         `composer require laravel/passport ` \
         `cp .env.example .env ` \
